@@ -228,8 +228,5 @@ try:
 except sqlite3.Error as error:
     print("Error while connecting to database",error)
     
-#printing all 4 tables in LifeHack.DB
-display(df_users)
-display(df_pi)
-display(df_user_be)
-display(df_user_fe)
+#printing User Frontend Table
+df_user_fe
