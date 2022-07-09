@@ -25,7 +25,7 @@ function Homepage() {
         <button id="myBtn" onClick={openModal}>Log in</button>
         <div id="myModal" className="modal">
             <div className="modal-content">
-                <span class="close" onClick={closeModal} >&times;</span>
+                <span className="close" onClick={closeModal} >&times;</span>
                 <h2>Log in</h2>
                 <input type="textbox" placeholder="Username/ Email"/>
                 <br></br>
