@@ -29,7 +29,7 @@ function Modal(props) {
                   <input type="password" name="password" placeholder="Password" onChange={event => setPassword(event.target.value)}
           value={password}/>
                   <p><a href="./reset">Forget password?</a></p>
-                  <button type="submit">Log in</button>
+                  <Link to="./itemslist"><button type="submit">Log in</button></Link>
                 </form>
               </div>
         </div>
