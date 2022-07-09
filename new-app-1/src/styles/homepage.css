@@ -61,12 +61,12 @@ body {
   border: none;
   border-radius: 15px;
   box-shadow: 0 6px #999;
-  margin: 0;
+  margin-bottom: 0px;
   position: relative;
   top: 50%;
   left: 50%;
   -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, 50%);
   /* background-image: */
 }
 
@@ -77,5 +77,5 @@ body {
   background-color: #3e8e41;
   box-shadow: 0 3px #666;
   -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, 55%);
 }
