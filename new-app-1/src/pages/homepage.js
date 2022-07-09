@@ -23,7 +23,7 @@ function Homepage() {
         <h1>INSERT NAME</h1>
         <p>Smarter meal planning decisions</p>
         <button id="myBtn" onClick={openModal}>Log in</button>
-        <div id="myModal" class="modal">
+        <div id="myModal" className="modal">
             <div className="modal-content">
                 <span class="close" onClick={closeModal} >&times;</span>
                 <h2>Log in</h2>
