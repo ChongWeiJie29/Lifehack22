@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import Itemslist from '../itemslist/itemslist';
-import getUsername  from '../../functions/accessDB';
 
 function Modal(props) {
     const [userName, setUserName] = useState('');
