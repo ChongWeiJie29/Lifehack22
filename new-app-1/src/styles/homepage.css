@@ -4,12 +4,17 @@
   font-family: "Poppins", sans-serif;
 }
 
+:root {
+  --clr: #161718;
+}
+
 body {
-  background-image: url("lifehack_home.png");
-  background-repeat: no-repeat;
+  /* background-image: url(); */
+  /* background-repeat: no-repeat;
   background-position: center;
   background-size: 100% 100%;
-  background-attachment: fixed;
+  background-attachment: fixed; */
+  background: var(--clr);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -66,17 +71,20 @@ body {
 }
 @keyframes main_title {
   0% {
-    background-color: rgb(255, 255, 255);
+    color: white;
+    background-color: #161718;
     left: 0px;
     top: 70px;
   }
   75% {
-    background-color: red;
+    color: white;
+    background-color: #161718;
     left: 0px;
     top: 70px;
   }
   100% {
-    background-color: red;
+    color: black;
+    background-color: white;
     left: 0px;
     top: 0px;
   }
@@ -89,6 +97,7 @@ body {
   animation-name: main_description;
   /* animation-delay: 0s; */
   animation-duration: 3.2s;
+  color: white;
 }
 @keyframes main_description {
   0% {
@@ -106,23 +115,11 @@ body {
 }
 
 #myBtn {
-  position: relative;
-  background-color: black;
-  border-radius: 4em;
-  font-size: 16px;
-  color: white;
-  padding: 0.8em 1.8em;
-  cursor: pointer;
-  user-select: none;
-  text-align: center;
-  text-decoration: none;
-  cursor: pointer;
-  transition-duration: 0.4s;
-  -webkit-transition-duration: 0.4s; /* Safari */
-}
-
-#myBtn {
-  padding: 15px 25px;
+  width: 100px;
+  height: 100px;
+  object-fit: none;
+  object-position: 0 300px;
+  /* padding: 15px 25px; */
   font-size: 24px;
   text-align: center;
   cursor: pointer;
@@ -131,7 +128,7 @@ body {
   background-color: #04aa6d;
   border: none;
   border-radius: 15px;
-  box-shadow: 0 6px #999;
+  box-shadow: 0 6px rgb(100, 100, 100);
   margin-bottom: 0px;
   position: relative;
   top: 50%;
