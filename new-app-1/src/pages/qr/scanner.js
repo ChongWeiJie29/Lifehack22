@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Html5QrcodePlugin from "./qrCode";
+import Html5QrcodePlugin from "./qrCode.jsx";
 import { Link, useNavigate } from 'react-router-dom';
 import Itemslist from '../itemslist/itemslist';
 

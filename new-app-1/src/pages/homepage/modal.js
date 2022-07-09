@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import Itemslist from '../itemslist/itemslist';
 
 function Modal(props) {
     const [userName, setUserName] = useState('');
@@ -10,9 +9,7 @@ function Modal(props) {
         event.preventDefault(); // 👈️ prevent page refresh
     
         // 👇️ access input values here
-        if (true) {
-          navigate("./itemslist"); 
-        }
+        
     
         // 👇️ clear all input values in the form
         setUserName('');

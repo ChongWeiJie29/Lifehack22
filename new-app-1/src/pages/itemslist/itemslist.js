@@ -3,11 +3,12 @@ import Modal from "./modal_filter";
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import Scanner from "../qr/scanner";
+import background from "../../styles/lifehack_home.png";
 
 function Itemslist() {
   const [modalState, setModalState] = useState("none");
   return (
-    <div className="App">
+    <div className="App" style={{ backgroundImage: `url(${background})` }}>
       <div id="header_list">
         <h1 id="item_title">Items</h1>
         <button id="Filter_button" onClick={() => setModalState("block")}>
