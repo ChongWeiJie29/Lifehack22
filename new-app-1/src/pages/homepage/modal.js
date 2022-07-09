@@ -10,7 +10,7 @@ function Modal(props) {
                   <input type="textbox" placeholder="Username/ Email"/>
                   <br></br>
                   <input type="textbox" placeholder="Password"/>
-                  <p><a href="reset.html">Forget password?</a></p>
+                  <p><a href="./reset">Forget password?</a></p>
                   <button>Log in</button>
               </div>
         </div>
