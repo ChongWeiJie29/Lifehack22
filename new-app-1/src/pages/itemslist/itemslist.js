@@ -2,7 +2,6 @@ import "../../styles/itemlist.css";
 import Modal from "./modal_filter";
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import Scanner from "../qr/scanner";
 import background from "../../styles/lifehack_home.png";
 
 function Itemslist() {
@@ -14,7 +13,11 @@ function Itemslist() {
         <button id="Filter_button" onClick={() => setModalState("block")}>
           Filter
         </button>
-        <Modal display={modalState} setDisplayState={setModalState} />
+        <Modal
+          id="filter_modal"
+          display={modalState}
+          setDisplayState={setModalState}
+        />
       </div>
       <div class="item">
         <h2>Item0</h2>
