@@ -1,9 +1,10 @@
 #item_title {
-  color: white;
+  color: black;
   margin-top: 5%;
   margin-right: 5%;
   text-align: left;
   border-style: solid;
+  border-width: 0;
   border-bottom-width: 2px;
   border-color: white;
 }
@@ -19,7 +20,7 @@
 .item {
   border-style: double;
   border-width: 2px;
-  border-color: white;
+  border-color: rgb(55, 55, 55);
 }
 .item: h2 {
   margin-top: 0;
