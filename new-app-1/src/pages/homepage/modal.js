@@ -11,7 +11,7 @@ function Modal(props) {
                   <h2>Log in</h2>
                   <input type="textbox" placeholder="Username/ Email"/>
                   <br></br>
-                  <input type="textbox" placeholder="Password"/>
+                  <input type="password" placeholder="Password"/>
                   <p><a href="./reset">Forget password?</a></p>
                   <Link to='./itemslist'><button>Log in</button></Link>
               </div>
