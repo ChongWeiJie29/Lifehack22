@@ -39,7 +39,7 @@ print_users = '''
 '''
 
 try: 
-    conn = sqlite3.connect('LifeHack.db')
+    conn = sqlite3.connect('./LifeHack.db')
     print("LifeHack.db created and connected.")
     
     conn.execute(drop_users)

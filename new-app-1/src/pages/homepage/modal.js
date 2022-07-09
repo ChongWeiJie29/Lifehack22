@@ -9,7 +9,9 @@ function Modal(props) {
         event.preventDefault(); // 👈️ prevent page refresh
     
         // 👇️ access input values here
-        
+        if (true) {
+          navigate('itemslist');
+        }
     
         // 👇️ clear all input values in the form
         setUserName('');
