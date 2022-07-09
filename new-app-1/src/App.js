@@ -1,9 +1,16 @@
 import Homepage from "./pages/homepage/homepage"; 
+import Scanner from "./pages/qr/scanner";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
   return (
     <div className="App">
-      <Homepage />
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Homepage />} />
+        <Route path="scanner" element={<Scanner />} />
+      </Routes>
+    </BrowserRouter>
     </div>
   );
 }
