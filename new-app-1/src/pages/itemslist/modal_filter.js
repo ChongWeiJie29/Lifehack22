@@ -8,12 +8,14 @@ function Modal(props) {
           <div id="myModal" className="modal" style={{display:props.display}}>
               <div className="modal-content">
                   <span className="close" onClick={()=> props.setDisplayState('none')}>&times;</span>
-                  <h2>Log in</h2>
-                  <input type="textbox" placeholder="Username/ Email"/>
+                  <h2>Please select how you want to view</h2>
+                  <input type="radio" id="expiry"/>
+                  <label for="expiry">Expiry Date</label>
                   <br></br>
-                  <input type="textbox" placeholder="Password"/>
-                  <p><a href="./reset">Forget password?</a></p>
-                  <Link to='./itemslist'><button>Log in</button></Link>
+                  <input type="radio" id="name" />
+                  <label for="name">Alphabetical Order</label>
+                  <br></br>
+                  <Link to='./itemslist'><button>Confirm</button></Link>
               </div>
         </div>
     );
