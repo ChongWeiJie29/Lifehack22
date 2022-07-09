@@ -1,8 +1,7 @@
 {
   "name": "LifeHackers-2022",
-  "version": "1.0.0",
-  "description": "9-10 July hackathon",
-  "main": "index.js",
+  "version": "0.1.0",
+  "description": "9-10 July Hackathon",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.4",
@@ -36,16 +35,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/NicholasTanYY/LifeHackers-2022.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/NicholasTanYY/LifeHackers-2022/issues"
-  },
-  "homepage": "https://github.com/NicholasTanYY/LifeHackers-2022#readme"
+  }
 }
