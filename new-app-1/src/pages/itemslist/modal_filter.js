@@ -9,13 +9,13 @@ function Modal(props) {
               <div className="modal-content">
                   <span className="close" onClick={()=> props.setDisplayState('none')}>&times;</span>
                   <h2>Please select how you want to view</h2>
-                  <input type="radio" id="expiry"/>
+                  <input type="radio" id="expiry" name="choice" required="required"/>
                   <label for="expiry">Expiry Date</label>
                   <br></br>
-                  <input type="radio" id="name" />
+                  <input type="radio" id="name" name="choice"/>
                   <label for="name">Alphabetical Order</label>
                   <br></br>
-                  <Link to='./itemslist'><button>Confirm</button></Link>
+                  <Link to="./itemslist"><button>Confirm</button></Link>
               </div>
         </div>
     );
