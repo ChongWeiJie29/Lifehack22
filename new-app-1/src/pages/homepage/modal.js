@@ -1,17 +1,19 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import Itemslist from '../itemslist/itemslist';
+import getUsername  from '../../functions/accessDB';
 
 function Modal(props) {
-    const [modalState, setModalState] = useState("none");
     const [userName, setUserName] = useState('');
     const [password, setPassword] = useState('');
+    const navigate = useNavigate();
     const handleSubmit = event => {
         event.preventDefault(); // 👈️ prevent page refresh
     
         // 👇️ access input values here
-        console.log('userName 👉️', userName);
-        console.log('password 👉️', password);
+        if (true) {
+          navigate("./itemslist"); 
+        }
     
         // 👇️ clear all input values in the form
         setUserName('');

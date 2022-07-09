@@ -1,23 +1,20 @@
 const sqlite3 = require('sqlite3');
 const path = require('path');
 
-const db = new sqlite3.Database(path.resolve(__dirname, '../database/LifeHack.db'));
-console.log("Connection successful.")
+function getUsername(userName){
+    return new Promise((resolve, reject) => {
+      const db = new sqlite3.Database(path.resolve(__dirname, '../database/LifeHack.db'));
+      console.log("Connection successful.")
+      var query = `SELECT * FROM users WHERE username='${userName}'`;
+      db.all(query, function (err, rows) {
+        if (err) reject(err);
+        resolve(rows);
+      });
+    })
+  }
 
-function getUsername(uid, callback){
-    var query = `SELECT * FROM users WHERE userid = '${uid}'`;
-    db.all(query, function (err, rows) {
-      if(err){
-          console.log(err);
-      }else{
-          callback(rows);
-      }
+  let promise = getUsername("ntyythepro") // => Promise { <pending> }
+    .then((results) => {
+      return results; // => { slug: 'adding-matomo-website', read_times: 1, shares: 0, likes: 0 }
     });
-    db.close();
-  }
-
-  function print(uid) {
-    console.log(uid);
-  }
-
-  getUserId("002", print)
+  console.log(promise)
