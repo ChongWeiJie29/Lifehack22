@@ -40,6 +40,14 @@ function Itemslist() {
           <h2>Item4</h2>
           <p>Expiry Date: 05-Jan-2023</p>
         </div>
+        <div class="item">
+          <h2>Item5</h2>
+          <p>Expiry Date: 06-Jan-2023</p>
+        </div>
+        <div class="item">
+          <h2>Item6</h2>
+          <p>Expiry Date: 07-Jan-2023</p>
+        </div>
       </div>
       <div class="tab">
         <button id="item_tab">Items</button>
