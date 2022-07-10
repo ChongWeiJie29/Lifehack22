@@ -12,7 +12,7 @@
   display: inline;
 }
 #Filter_button {
-  background-image: url("https://www.flaticon.com/free-icons/filter");
+  background-image: url("https://www.flaticon.com/premium-icon/filter_3839020?term=filter&page=1&position=3&page=1&position=3&related_id=3839020&origin=tag");
   width: 50px;
   height: 50px;
   float: right;
@@ -21,12 +21,39 @@
   border-style: double;
   border-width: 2px;
   border-color: rgb(55, 55, 55);
+  box-sizing: border-box;
+  height: 100px;
 }
-.item: h2 {
+.item h2 {
   margin-top: 0;
 }
-.item: p {
+.item p {
   margin-top: 0;
+}
+
+.content {
+  overflow-y: auto;
+  overflow-x: hidden;
+  height: 400px;
+  width: 100%;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: gainsboro;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: black;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }
 
 #filter_modal {
@@ -38,4 +65,18 @@
   overflow: auto; /* Enable scroll if needed */
   background-color: rgb(0, 0, 0); /* Fallback color */
   background-color: rgba(0, 0, 0, 0.4);
+}
+
+.tabs {
+  position: fixed;
+  bottom: 0;
+  display: board;  
+  flex-wrap: wrap;
+}
+
+.tablinks {
+  text-align: center;
+  width: 50%;
+  height: 35px;
+  border: 5px 0px 5px 0px;
 }
