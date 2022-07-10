@@ -22,9 +22,7 @@ function Modal(props) {
           Alphabetical Order
         </label>
         <br></br>
-        <Link to="./itemslist">
-          <button>Confirm</button>
-        </Link>
+          <button onClick={()=>{props.setDisplayState('none')}}>Confirm</button>
       </div>
     </div>
   );
