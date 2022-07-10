@@ -1,4 +1,4 @@
-
+import "../../styles/itemlist.css";
 
 function IndivItems(props) {
     return (
