@@ -1,2 +1,2 @@
-# LifeHackers-2022
+# Ex-(Ins)-pire
 9-10 July hackathon
