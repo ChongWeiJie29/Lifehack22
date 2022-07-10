@@ -21,30 +21,30 @@ function Itemslist() {
       </div>
       <div class="content">
         <div class="item">
-            <h2>Item0</h2>
-            <p>Expiry Date: 01-Jan-2023</p>
+          <h2>Item0</h2>
+          <p>Expiry Date: 01-Jan-2023</p>
         </div>
         <div class="item">
-            <h2>Item1</h2>
-            <p>Expiry Date: 02-Jan-2023</p>
+          <h2>Item1</h2>
+          <p>Expiry Date: 02-Jan-2023</p>
         </div>
         <div class="item">
-            <h2>Item2</h2>
-            <p>Expiry Date: 03-Jan-2023</p>
+          <h2>Item2</h2>
+          <p>Expiry Date: 03-Jan-2023</p>
         </div>
         <div class="item">
-            <h2>Item3</h2>
-            <p>Expiry Date: 04-Jan-2023</p>
+          <h2>Item3</h2>
+          <p>Expiry Date: 04-Jan-2023</p>
         </div>
         <div class="item">
-            <h2>Item4</h2>
-            <p>Expiry Date: 05-Jan-2023</p>
+          <h2>Item4</h2>
+          <p>Expiry Date: 05-Jan-2023</p>
         </div>
       </div>
       <div class="tab">
-        <button class="tablinks">Items</button>
+        <button id="item_tab">Items</button>
         <Link to="../scanner">
-          <button class="tablinks">QR code scanner</button>
+          <button id="QR_tab">QR code scanner</button>
         </Link>
       </div>
     </div>

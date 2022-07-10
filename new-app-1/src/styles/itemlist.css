@@ -67,16 +67,20 @@
   background-color: rgba(0, 0, 0, 0.4);
 }
 
-.tabs {
+.tab {
   position: fixed;
   bottom: 0;
-  display: board;  
+  display: inline;
   flex-wrap: wrap;
 }
 
-.tablinks {
+#item_tab {
   text-align: center;
-  width: 50%;
-  height: 35px;
-  border: 5px 0px 5px 0px;
+  margin-left: 2%;
+  width: 37%;
+}
+
+#QR_tab {
+  margin-right: -10%;
+  float: right;
 }
