@@ -1,0 +1,42 @@
+[
+    {
+        "email": "Abc123@gmail.com",
+        "first_name": "Kyle",
+        "last_name": "Lao",
+        "password": "Password_1",
+        "userid": "001",
+        "username": "kyledilao"
+    },
+    {
+        "email": "Abc456@gmail.com",
+        "first_name": "Nicholas",
+        "last_name": "Tan",
+        "password": "Password_2",
+        "userid": "002",
+        "username": "ntyythepro"
+    },
+    {
+        "email": "Def123@gmail.com",
+        "first_name": "Wei Jie",
+        "last_name": "Chong",
+        "password": "Password_3",
+        "userid": "003",
+        "username": "chongweijie"
+    },
+    {
+        "email": "Def456@gmail.com",
+        "first_name": "Shang Kun",
+        "last_name": "Lu",
+        "password": "Password_4",
+        "userid": "004",
+        "username": "shangkun"
+    },
+    {
+        "email": "Ghi123@gmail.com",
+        "first_name": "Timothy",
+        "last_name": "Loh",
+        "password": "Password_5",
+        "userid": "005",
+        "username": "random_005"
+    }
+]
