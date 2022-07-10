@@ -1,3 +1,5 @@
+const path = require('path');
+
 module.exports = {
     webpack: {
         configure:{
@@ -9,11 +11,15 @@ module.exports = {
                 }]
             },
             resolve: {
+                alias:{
+                    mydir: path.resolve( __dirname, 'path', 'to', 'mydir' )
+                  },
+                extensions: [ '', '.js' ],
                 fallback: {
                     "fs": false,
                     "path": false,
                     "url": false
-                },
+                }
             }
         }
     }
