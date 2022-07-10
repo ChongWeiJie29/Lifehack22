@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "./static/css/main.395a841d.css",
+    "main.js": "./static/js/main.1a97e748.js",
+    "static/media/lifehack_home.png": "./static/media/lifehack_home.e0dc07d2e5ea2685e74e.png",
+    "index.html": "./index.html",
+    "main.395a841d.css.map": "./static/css/main.395a841d.css.map",
+    "main.1a97e748.js.map": "./static/js/main.1a97e748.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.395a841d.css",
+    "static/js/main.1a97e748.js"
+  ]
+}

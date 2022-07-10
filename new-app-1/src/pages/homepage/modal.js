@@ -1,23 +1,20 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { checkUserName } from '../../functions/accessDB.mjs';
+import { checkPassword, checkUserName } from '../../functions/accessDB.mjs';
 
 function Modal(props) {
     const [userName, setUserName] = useState('');
     const [password, setPassword] = useState('');
     const navigate = useNavigate();
     const handleSubmit = event => {
-        event.preventDefault(); // 👈️ prevent page refresh
-    
-        // 👇️ access input values here
-        if (true) {
-          console.log("pass");
+        event.preventDefault();
+
+        if (checkUserName(userName) && checkPassword(password)) {
           navigate('itemslist');
         } else {
           console.log("fail");
         }
     
-        // 👇️ clear all input values in the form
         setUserName('');
         setPassword('');
       };
