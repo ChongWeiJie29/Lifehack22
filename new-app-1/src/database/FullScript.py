@@ -48,13 +48,14 @@ try:
 except sqlite3.Error as error:
     print("Error while connecting to database",error)
     
-#create "Paid Inventory" table for userid 001
+## create "Paid Inventory" table for userid 001
 drop_pi = ''' 
 DROP TABLE IF EXISTS paid_inventory
 ; 
 '''
 userid = '001'
 
+#initialise PI table
 create_pi = '''
     CREATE TABLE paid_inventory(
         userid nvarchar(10),
@@ -72,6 +73,7 @@ create_pi = '''
 ;
 '''
 
+#populate PI table using hard-coded data
 populate_pi = '''
     INSERT INTO paid_inventory (
         userid,
@@ -105,30 +107,26 @@ pi_records = [
 
 ]
 
-print_pi = '''
-     SELECT * FROM paid_inventory
 ;
 '''
 
 try: 
     conn.execute(drop_pi)
     conn.execute(create_pi)
-    cursor = conn.cursor()
     cursor.executemany(populate_pi, pi_records)
     conn.commit()
     print("Paid Inventory Table created and populated.", "\n")
     
-    df_pi = pd.read_sql_query(print_pi,conn)
-    
 except sqlite3.Error as error:
     print("Error while connecting to database",error)
 
-#create Backend Table
+##create Backend Table
 drop_user_be = ''' 
 DROP TABLE IF EXISTS user_be
 ; 
 '''
 
+#initialise backend table
 create_user_be= '''
     CREATE TABLE user_be(
         userid nvarchar(10),
@@ -151,6 +149,7 @@ create_user_be= '''
 ;
 '''
 
+#populate backend table
 populate_user_be = '''
     INSERT INTO user_be 
     SELECT users.userid,username,first_name,last_name,email,password,serialno,category,category_id,
@@ -160,13 +159,7 @@ populate_user_be = '''
     WHERE users.userid = paid_inventory.userid
     
 ;
-'''    
-
-print_user_be = '''   
-    SELECT * FROM user_be
-;
-'''
-
+'''   
 try:
     conn.execute(drop_user_be)
     conn.execute(create_user_be)
@@ -179,12 +172,12 @@ try:
 except sqlite3.Error as error:
     print("Error while connecting to database",error)
     
-#create Frontend Table
+##create Frontend Table
 drop_user_fe = ''' 
 DROP TABLE IF EXISTS user_fe
 ; 
 '''
-
+#initialise frontend table
 create_user_fe= '''
     CREATE TABLE user_fe(
         username nvarchar(255),
@@ -197,6 +190,7 @@ create_user_fe= '''
 ;
 '''
 
+#populate frontend table
 populate_user_fe= '''
     INSERT INTO user_fe 
     SELECT username, item_desc, item_ID, date_purchased,man_date,expiry_date FROM user_be
