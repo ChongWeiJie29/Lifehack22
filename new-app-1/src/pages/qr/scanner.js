@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Html5QrcodePlugin from "./qrCode.jsx";
+import Html5QrcodePlugin from "./qrCode";
 import { Link, useNavigate } from 'react-router-dom';
 import Itemslist from '../itemslist/itemslist';
 
@@ -20,8 +20,8 @@ class Scanner extends React.Component {
                 disableFlip={false}
                 qrCodeSuccessCallback={this.onNewScanResult}/>
             <div class="tab">
-                <Link to="../itemslist"><button class="tablinks">Items</button></Link>
-                <button class="tablinks">QR code scanner</button>
+                <Link to="../itemslist"><button class="item_tab">Items</button></Link>
+                <button class="QR_tab">QR code scanner</button>
             </div>
         </div>);
     }
