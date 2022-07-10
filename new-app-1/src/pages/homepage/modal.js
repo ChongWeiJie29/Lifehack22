@@ -1,9 +1,6 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { checkUserName } from '../../functions/accessDB.mjs';
-import initSqlJs from 'sql.js';
-import { readFileSync } from 'fs';
-import fileUrl from 'file-url';
+import { checkPassword, checkUserName } from '../../functions/accessDB.mjs';
 
 function Modal(props) {
     const [userName, setUserName] = useState('');
@@ -12,10 +9,7 @@ function Modal(props) {
     const handleSubmit = event => {
         event.preventDefault();
 
-        console.log(checkUserName(userName));
-        // 👇️ access input values here
-        if (true) {
-          console.log("pass");
+        if (checkUserName(userName) && checkPassword(password)) {
           navigate('itemslist');
         } else {
           console.log("fail");
