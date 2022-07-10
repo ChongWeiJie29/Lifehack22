@@ -12,12 +12,12 @@ function Modal(props) {
           &times;
         </span>
         <h2 id="modal_filter_title">Sort by:</h2>
-        <input type="radio" id="expiry" />
+        <input type="radio" id="expiry" name="choice" required="required" />
         <label for="expiry" class="filter_options">
           Expiry Date
         </label>
         <br></br>
-        <input type="radio" id="name" />
+        <input type="radio" id="name" name="choice" />
         <label for="name" class="filter_options">
           Alphabetical Order
         </label>
