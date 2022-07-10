@@ -3,9 +3,15 @@ import Modal from "./modal_filter";
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import background from "../../styles/lifehack_home.png";
+import IndivItems from "./indivlist";
+import userList from '../../database/user_fe.json';
 
 function Itemslist() {
   const [modalState, setModalState] = useState("none");
+  var rows = [];
+  for (let i of userList) {
+      rows.push(<IndivItems item={i.item_desc} expiry={i.expiry_date} />);
+  }
   return (
     <div className="App" style={{ backgroundImage: `url(${background})` }}>
       <div id="header_list">
@@ -20,34 +26,7 @@ function Itemslist() {
         />
       </div>
       <div class="content">
-        <div class="item">
-          <h2>Item0</h2>
-          <p>Expiry Date: 01-Jan-2023</p>
-        </div>
-        <div class="item">
-          <h2>Item1</h2>
-          <p>Expiry Date: 02-Jan-2023</p>
-        </div>
-        <div class="item">
-          <h2>Item2</h2>
-          <p>Expiry Date: 03-Jan-2023</p>
-        </div>
-        <div class="item">
-          <h2>Item3</h2>
-          <p>Expiry Date: 04-Jan-2023</p>
-        </div>
-        <div class="item">
-          <h2>Item4</h2>
-          <p>Expiry Date: 05-Jan-2023</p>
-        </div>
-        <div class="item">
-          <h2>Item5</h2>
-          <p>Expiry Date: 06-Jan-2023</p>
-        </div>
-        <div class="item">
-          <h2>Item6</h2>
-          <p>Expiry Date: 07-Jan-2023</p>
-        </div>
+        {rows}
       </div>
       <div class="tab">
         <button id="item_tab">Items</button>
