@@ -1,12 +1,17 @@
 import sqlite3
 import pandas as pd
 
-#creating existing users table
+# Create main database
+conn = sqlite3.connect('./LifeHack.db')
+cursor = conn.cursor()
+print("LifeHack.db created and connected.")
+   
+## Create user table
 drop_users = ''' 
 DROP TABLE IF EXISTS users
 ; 
 '''
-
+# initialise user table
 create_users = '''
     CREATE TABLE users(
         userid nvarchar(10) PRIMARY KEY,
@@ -18,40 +23,27 @@ create_users = '''
         )       
 ;
 '''
-
+# populate user table with hard-coded results
 populate_users = '''
     INSERT INTO users (userid, username, first_name,last_name, email, password)
     VALUES(?,?,?,?,?,?)
 ;
 '''
-
 records_to_insert = [
     ('001','kyledilao','Kyle', 'Lao', 'Abc123@gmail.com','Password_1'),
     ('002','ntyythepro','Nicholas','Tan','Abc456@gmail.com','Password_2'),
     ('003','chongweijie','Wei Jie','Chong','Def123@gmail.com','Password_3'),
     ('004','shangkun','Shang Kun','Lu','Def456@gmail.com','Password_4'),
     ('005','random_005','Timothy','Loh','Ghi123@gmail.com','Password_5')
-]
-
-print_users = '''
-    SELECT * FROM users
+    ]
 ;
 '''
-
 try: 
-    conn = sqlite3.connect('./LifeHack.db')
-    print("LifeHack.db created and connected.")
-    
     conn.execute(drop_users)
-        
     conn.execute(create_users)
-    
-    cursor = conn.cursor()
     cursor.executemany(populate_users, records_to_insert)
     conn.commit()
     print("Users Table created and populated.", "\n")
-    
-    df_users = pd.read_sql_query(print_users,conn)
     
 except sqlite3.Error as error:
     print("Error while connecting to database",error)
